@@ -1,0 +1,27 @@
+.todoList {
+  padding: 0 1em;
+}
+
+.todoList__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todoList__title input {
+  color: black;
+  border: none;
+  font-size: 2.2em;
+  padding: 0.5em 0;
+  background: none;
+}
+
+.todoList__title input:focus {
+  outline: none;
+}
+
+.todoListCard h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+  padding-bottom: 0.6em;
+}

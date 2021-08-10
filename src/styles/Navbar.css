@@ -1,0 +1,14 @@
+.navbar {
+  width: 100%;
+  background-color: #393939;
+  padding: 1em 0;
+  color: white;
+}
+
+.navbar__logo {
+  padding: 0 1em;
+}
+
+.navbar__logo h2 {
+  width: 100px;
+}
