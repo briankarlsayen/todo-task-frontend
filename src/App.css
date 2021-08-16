@@ -7,3 +7,31 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.paddingSize {
+  padding: 0 25em !important;
+}
+
+@media only screen and (max-width: 1680px) {
+  .paddingSize {
+    padding: 0 15em !important;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .paddingSize {
+    padding: 0 10em !important;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .paddingSize {
+    padding: 0 8em !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .paddingSize {
+    padding: 0 1em !important;
+  }
+}

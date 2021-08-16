@@ -9,8 +9,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <Switch>
-      
+      <Switch>      
           <Route path="/todo/:todoheaderid/todolist" component={()=>(
               <TodoList/>
           )} />
@@ -20,7 +19,7 @@ function App() {
           <Route path="/todo" component={()=>(
               <TodoHeader/>
           )} />
-          <Redirect from="/todo/:todoheaderid/todolist" to="/todo" />
+          <Redirect to="/todo" />
       </Switch>
     </div>
   );

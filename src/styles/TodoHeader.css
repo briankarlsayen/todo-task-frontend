@@ -9,3 +9,35 @@
   color: black;
   margin: 1em 0;
 }
+
+.todoHeader__form,
+.todoList__form {
+  display: flex;
+  width: 100%;
+}
+
+.todoHeader__txt,
+.todoList__txt {
+  flex: 1;
+  border: 2px solid black;
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+  padding-left: 2em;
+}
+
+.todoHeader__txt:focus,
+.todoList__txt:focus {
+  outline: none;
+}
+
+.todoHeader__btn,
+.todoList__formBtn {
+  flex: 0.1;
+  width: 100% !important;
+  border-radius: 15px;
+  height: 35px !important;
+  border: 2px solid black;
+  border-left: none;
+  border-radius: 0 15px 15px 0;
+  background-color: white;
+}

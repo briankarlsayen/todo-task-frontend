@@ -30,7 +30,6 @@ const pokemonSlice = createSlice({
         [fetchTodos.fulfilled]: (state, action) => {
             state.status = 'success'
             state.list = action.payload
-            console.log(action.payload)
         },
         [fetchTodos.rejected]: (state, action) => {
             state.status = 'failed to get todos'

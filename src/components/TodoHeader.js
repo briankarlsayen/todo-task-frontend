@@ -4,6 +4,8 @@ import TodoHeaderCard from './TodoHeaderCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchTodos } from '../reducers/todoSlice'
 import _ from 'lodash'
+import AddIcon from '@material-ui/icons/Add';
+import moment from 'moment'
 import '../styles/TodoHeader.css'
 import axios from './axios';
 
@@ -19,7 +21,7 @@ function TodoHeader(props) {
             todoList.list.map(({_id, header, createdAt}) => {
                 return(
                     <Link key={_id} to={`/todo/${_id}/todolist`}>
-                        <TodoHeaderCard  header={header} date={createdAt} _id={_id} />
+                        <TodoHeaderCard  header={header} date={moment(createdAt).format("MMM Do YY")} _id={_id} />
                     </Link>     
                 )})
         )}
@@ -46,11 +48,18 @@ function TodoHeader(props) {
         dispatch(fetchTodos())
     },[callback])
 
+    const formatDate = (d) => {
+        //let result = moment(d).format('MMMM Do YYYY, h:mm:ss a');
+        let result = moment(d, "YYYYMMDD").fromNow();
+
+        console.log(result)
+    }
+
     return (
-        <div className="todoHeader">
-            <form onSubmit={handleSubmit}>
-                <input placeholder="input your todo here" value={addTodo} type="text" onChange={e => setAddTodo(e.target.value)} />
-                <button>Add todo</button>
+        <div className="todoHeader paddingSize">
+            <form className="todoHeader__form" onSubmit={handleSubmit}>
+                <input className="todoHeader__txt" placeholder="Add todo" value={addTodo} type="text" onChange={e => setAddTodo(e.target.value)} />
+                <AddIcon className="todoHeader__btn" type="submit" onClick={handleSubmit}/>
             </form>
             {ShowData()}
         </div>

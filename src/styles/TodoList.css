@@ -9,6 +9,7 @@
 }
 
 .todoList__title input {
+  width: 100%;
   color: black;
   border: none;
   font-size: 2.2em;
@@ -16,12 +17,53 @@
   background: none;
 }
 
+.todoList__title .todoList__btn {
+  display: flex;
+}
+
 .todoList__title input:focus {
   outline: none;
 }
 
-.todoListCard h2 {
+.todoListCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em 0;
+}
+
+.todoListCard__txt {
+  flex: 1;
   font-size: 1.1em;
   font-weight: 400;
-  padding-bottom: 0.6em;
+  border: none;
+  background-color: white;
+  color: black;
+  height: 35px;
+}
+
+.todoListCard__text {
+  display: flex;
+  align-items: center;
+}
+
+.todoListCard__text input[type="checkbox"] {
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+
+.todoListCard__edit:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.todoListCard__edit {
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: 400;
+  height: 35px;
+  border: none;
+}
+
+.todoListCard__editForm {
+  flex: 1;
 }
