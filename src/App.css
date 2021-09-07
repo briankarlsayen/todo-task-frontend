@@ -1,6 +1,17 @@
+:root {
+  --nav-color: #7952b3;
+  --font-color: #343a40;
+  --icon-color: #ffc107;
+  --background-color: #e1e8eb;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -8,13 +19,26 @@ a {
   color: white;
 }
 
+textarea {
+  resize: none;
+  border: none;
+  overflow: hidden;
+}
+
 .paddingSize {
   padding: 0 25em !important;
+}
+
+body {
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 1680px) {
   .paddingSize {
     padding: 0 15em !important;
+  }
+  .loading__container {
+    right: 47%;
   }
 }
 
@@ -27,6 +51,9 @@ a {
 @media only screen and (max-width: 1080px) {
   .paddingSize {
     padding: 0 8em !important;
+  }
+  .loading__container {
+    right: 45%;
   }
 }
 

@@ -1,0 +1,20 @@
+.loading__container {
+  position: absolute;
+  z-index: 5;
+  top: 43%;
+  right: 43%;
+}
+
+.loading__icon {
+  height: 50px;
+  animation: rotation 2s infinite linear
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

@@ -1,3 +1,16 @@
+.todoHeaderCard {
+  background: var(--background-color);
+  padding: 4em 2.5em;
+  margin: 1em 0;
+  height: 12rem;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.todoHeaderCard:hover {
+  background-color: #d9dee0;
+}
+
 .todoHeaderCard__update {
   margin-top: 1.5em;
 }
@@ -5,4 +18,19 @@
 .headerCard__btn {
   padding: 0.5em 2em;
   margin-right: 0.5em;
+}
+
+.todoHeaderCard__header {
+  color: var(--font-color);
+  font-size: 26px;
+  width: 70%;
+  font-weight: 700;
+}
+
+.todoHeaderCard__subheader {
+  color: var(--nav-color);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
 }
